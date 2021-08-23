@@ -15,9 +15,13 @@ https://github.com/PGCSEDS-IIITH/compose-iris contains code which demonstrates d
 
 ## Assignment Task
 - Used Dibetes Data Set to do the task 
+
 df=pd.read_csv('https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.csv',header=None)
+
 df.columns=['no_times_pregant','glu_conc','bp','skin_thickness','insulin','mass_index','diabetes_pedgree','age','dibetes_yn']
+
 X= df.loc[ : , df.columns != 'dibetes_yn']
+
 y=df['dibetes_yn']
 clf=GaussianNB()
 clf.fit(X, y)
