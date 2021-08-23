@@ -23,9 +23,13 @@ df.columns=['no_times_pregant','glu_conc','bp','skin_thickness','insulin','mass_
 X= df.loc[ : , df.columns != 'dibetes_yn']
 
 y=df['dibetes_yn']
+
 clf=GaussianNB()
+
 clf.fit(X, y)
+
 import pickle
+
 pickle.dump(clf, open("pima_indians_diabetes.pkl", "wb"))
 
 ## Submission
