@@ -18,12 +18,15 @@ app.add_event_handler("startup", init_model)
 
 # class which is expected in the payload while training
 class TrainIn(BaseModel):
-    sepal_length: float
-    sepal_width: float
-    petal_length: float
-    petal_width: float
-    flower_class: str
-
+    no_times_pregant  : float
+    glu_conc          : float
+    bp                : float
+    skin_thickness    : float
+    insulin           : float
+    mass_index        : float
+    diabetes_pedgree  : float
+    age               : float
+    dibetes_yn        : float
 
 # Route definitions
 @app.get("/ping")

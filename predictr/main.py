@@ -8,10 +8,15 @@ app = FastAPI(title="predictr", docs_url="/")
 
 # class which is expected in the payload
 class QueryIn(BaseModel):
-    sepal_length: float
-    sepal_width: float
-    petal_length: float
-    petal_width: float
+    no_times_pregant  : float
+    glu_conc          : float
+    bp                : float
+    skin_thickness    : float
+    insulin           : float
+    mass_index        : float
+    diabetes_pedgree  : float
+    age               : float
+    dibetes_yn        : float
 
 
 # class which is returned in the response
@@ -31,7 +36,7 @@ def ping():
 # Payload: QueryIn containing the parameters
 # Response: QueryOut containing the flower_class predicted (200)
 def predict_flower(query_data: QueryIn):
-    output = {"flower_class": predict(query_data)}
+    output = {"dibetes_yn": predict(query_data)}
     return output
 
 
